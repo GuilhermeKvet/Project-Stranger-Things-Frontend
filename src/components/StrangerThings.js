@@ -89,6 +89,7 @@ class StrangerThings extends React.Component {
       },
       () => this.searchCharacter(),
     );
+    
   }
 
   previousPage() {
