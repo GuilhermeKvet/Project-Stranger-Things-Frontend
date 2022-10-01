@@ -21,7 +21,12 @@ const upsideDownConfig = {
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
-const inDevelopment = process.env.REACT_APP_DEVELOPMENT;
+const convertToBoolean = (string) => {
+  if (string === 'false') return false;
+  if (string === 'true') return true;
+};
+
+const inDevelopment = convertToBoolean(process.env.REACT_APP_DEVELOPMENT);
 
 class StrangerThings extends React.Component {
   constructor(props) {
